@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="">
-	<input type="text" name = "scores" value = "100">
+	<input type="text" name = "scores" value = "100"> <%--미리 입력된 초기값 --%>
 	<br>
 	<input type="text" name = "scores"  value = "90">
 	<br>
