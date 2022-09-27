@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>내 첫번째 jsp 파일! jjw </h1>
-	
+	<p>설치부터 어렵다</p>
 	<!-- 주석: ctrl + shift + / -->
 	<ul class="note" id="list">
 		<li>Lorem ipsum.</li>
