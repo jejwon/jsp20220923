@@ -2,6 +2,9 @@
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
 
+<%--코드 조각 
+main, other1, other2에 include로 포함
+--%>
 <div>
 	<%
 	String k = (String) session.getAttribute("keyword");

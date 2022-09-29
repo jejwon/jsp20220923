@@ -8,12 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>상품</h1>
-	<form action="cart.jsp" method= "post">
-		상품명: <input type="text" name="product" value="노트북">
-		<input type="submit" value="장바구니에 추가">
-	</form>
+	<h1>쿠키 값 변경</h1>
 	
-	<a href="cart.jsp">장바구니 보기</a>
+	<%
+	Cookie cookie = new Cookie("my-cookie1", "my-value2");
+	
+	response.addCookie(cookie);
+	%>
+	<a href="02readCookie.jsp">쿠키 보러 가기</a>
 </body>
 </html>

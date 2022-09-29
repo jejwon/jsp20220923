@@ -13,6 +13,6 @@
 	<%
 	session.invalidate();
 	%>
-	<a href="04aboutSession.jsp"></a>
+	<a href="04aboutSession.jsp">세션 정보 보기</a>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
@@ -13,37 +14,39 @@
 	.main{
 		width: 80%;
 	}
-	
 	.ad{
-		background-color: linen;
 		width: 20%;
+		background-color: linen;
 	}
 </style>
 </head>
 <body>
+	<!-- .container>.main+.ad -->
 	<div class="container">
 		<div class="main">
-			<h1>검색 페이지</h1>
+			<h1>메인 페이지</h1>
 			<form action="">
-			<%--get방식 --%>
-				<input type="text" name="q">
-				<input type="submit" value ="검색">
+			검색: <input type="text" name="q" />
+			<input type="submit" value="검색" />
 			</form>
 			
-			<% 
+			<hr />
+			<%
 			String q = request.getParameter("q");
+			
 			if(q != null && !q.isBlank()){
 			%>
 				<h3><%=q %>의 검색 결과</h3>
 			<%
-				//session에 검색 키워드 저장
-				session.setAttribute("keyword", q);
+				
+				String k = URLEncoder.encode(q, "utf-8");
+				Cookie cookie = new Cookie("k", k);
+				response.addCookie(cookie);
 			}
 			%>
-			
-			<div class="ad">
-				<jsp:include page="ad.jsp"></jsp:include>
-			</div>
+		</div>
+		<div class="ad">
+		<jsp:include page= "ad.jsp"></jsp:include>
 		</div>
 	</div>
 </body>

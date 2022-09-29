@@ -14,7 +14,7 @@
 <title>세션 정보</title>
 </head>
 <body>	
-	세션 ID: <%=session.getID() %> <br>
+	세션 ID: <%=session.getId() %> <br>
 	<%
 	time.setTime(session.getCreationTime());
 	%>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h3>세션 아이디 : <%= session.getId() %></h3>
-	<h3>세션이 처음 만들어진 시간 : <%= session.getCreationTime() %></h3>
+	<h3>세션이 처음 만들어진 시간 : <%= session.getCreationTime() %></h3> <%--long타입 --%>
 	<h3>세션을 마지막에 사용한 시간 : <%= session.getLastAccessedTime() %></h3>
 	<h3>새로운 세션인지: <%= session.isNew() %></h3>
 	<h3>세션을 얼마나 유지해야하는지 (초) : <%= session.getMaxInactiveInterval() %></h3>

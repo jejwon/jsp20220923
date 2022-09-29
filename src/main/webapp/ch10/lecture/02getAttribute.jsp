@@ -9,6 +9,6 @@
 </head>
 <body>
 	<h1>세션에서 써낸 임의의 수</h1>
-	<h1><%=session.getAttribute("random number)%></h1>
+	<h1><%=session.getAttribute("random number")%></h1>
 </body>
 </html>
