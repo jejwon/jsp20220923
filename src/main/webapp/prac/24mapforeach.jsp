@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.*, jsp20220923.chap07.*" %>
+<%@ page import="java.util.*", jsp20220923.chap07.*"  %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <% request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
@@ -13,12 +13,21 @@
 </head>
 <body>
 <%
-pageContext.setAttribute("booklist", List.of(new Book("java", 500), new Book("spring", 300)));	
+Map map1 = new HashMap();
+map1.put("batman", 300);
+map1.put("dare", 500);
+map1.put("super", 200);
+
+pageContext.setAttribute("bookList", map1);
 %>
 
-<c:forEach items= "${bookList }" var="book">
-	<p>${book.title } : ${book.price }</p>
+<c:forEach items="bookList" var="book" varStatus="st">
+	<p>${st.count }. ${book.title } : ${book.price } </p>
 </c:forEach>
+
+<%
+pageContext.setAttribute("carList", )
+%>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
