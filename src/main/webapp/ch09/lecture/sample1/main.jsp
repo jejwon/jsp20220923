@@ -41,6 +41,8 @@
 				
 				String k = URLEncoder.encode(q, "utf-8");
 				Cookie cookie = new Cookie("k", k);
+				cookie.setPath(request.getContextPath());
+				cookie.setMaxAge(24*60*60);//하루(초단위)
 				response.addCookie(cookie);
 			}
 			%>
