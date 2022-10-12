@@ -34,8 +34,9 @@ public class Servlet13 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String sql = "SELECT FirstName FROM Employees WHERE EmployeeID = 1";
 		
-		//class loading
+		//class loading --> listener 초기화에 넣어둠
 		
+		//business logic
 		//connection 얻기
 		ServletContext application = request.getServletContext();
 		String url = application.getAttribute("jdbc.url").toString();

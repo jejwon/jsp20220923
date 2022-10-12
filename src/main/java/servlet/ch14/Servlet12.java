@@ -35,7 +35,7 @@ public class Servlet12 extends HttpServlet {
 		String sql = "SELECT CustomerName "
 				+ "FROM Customers "
 				+ "ORDER BY CustomerName ";
-		//1. JDBC 드라이버 로딩
+		//1. JDBC 드라이버 로딩 --> listener 초기화에 넣어둠
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
