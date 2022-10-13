@@ -45,7 +45,7 @@ public class SServlet4 extends HttpServlet {
 		int id = Integer.parseInt(idStr);
 		
 		//3. business logic
-		String sql = "SELECT CustomerName, City, Country "
+		String sql = "SELECT CustomerID, CustomerName, City, Country "
 				+ "FROM Customers "
 				+ "WHERE CustomerID = ? ";
 		
@@ -61,7 +61,7 @@ public class SServlet4 extends HttpServlet {
 			
 			pstmt.setInt(1, id);
 			
-			try(ResultSet rs = pstmt.executeQuery(sql);){
+			try(ResultSet rs = pstmt.executeQuery();){
 				//4. 결과 확인/ add attribute
 				List<Customer> list = new ArrayList<>();
 				while(rs.next()) {
