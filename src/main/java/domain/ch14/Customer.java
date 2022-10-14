@@ -3,6 +3,7 @@ package domain.ch14;
 public class Customer {
 	private int id;
 	private String name;
+	private String contname;
 	private String country;
 	private String city;
 	private String address;
@@ -20,6 +21,12 @@ public class Customer {
 		this.name = name;
 	}
 	
+	public String getContname() {
+		return contname;
+	}
+	public void setContname(String contname) {
+		this.contname = contname;
+	}
 	public String getCountry() {
 		return country;
 	}
