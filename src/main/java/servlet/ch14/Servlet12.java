@@ -46,7 +46,7 @@ public class Servlet12 extends HttpServlet {
 		ServletContext application = request.getServletContext();
 		
 		//2.데이터베이스 커넥션 구하기
-		String url = application.getAttribute("jdbc.url").toString();
+		String url = application.getAttribute("jdbc.url").toString(); 
 		String user = application.getAttribute("jdbc.username").toString();
 		String password = application.getAttribute("jdbc.password").toString();
 		
